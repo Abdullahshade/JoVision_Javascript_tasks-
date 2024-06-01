@@ -7,5 +7,7 @@ function GetIP() {
         const IP=data.ip;
         document.getElementById("GetIP").textContent=IP;
     })
-    
+    .catch(error => {
+        console.error('Error fetching the IP address:', error); 
+    });
 }

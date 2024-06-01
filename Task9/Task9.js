@@ -6,5 +6,7 @@ function GetIP() {
     .then(data => {
         console.log('Your IP address is:', data.ip);
     })
-    
+    .catch(error => {
+        console.error('Error fetching the IP address:', error); 
+    });
 }
