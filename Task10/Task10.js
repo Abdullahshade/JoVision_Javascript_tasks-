@@ -4,8 +4,9 @@ function GetIP() {
     fetch("https://api.ipify.org?format=json")
     .then(response => response.json())  
     .then(data => {
-        const IP=data.ip;
-        document.getElementById("GetIP").textContent=IP;
+        const ip=data.ip;
+        
+        document.getElementById("GetIP").textContent=data.ip;
     })
     .catch(error => {
         console.error('Error fetching the IP address:', error); 
